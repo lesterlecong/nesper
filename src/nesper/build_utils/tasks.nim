@@ -145,7 +145,9 @@ task esp_setup, "Setup a new esp-idf / nesper project structure":
       "NIMBLE_PROJ_NAME", nopts.projname,
       "NIMBLE_NIMCACHE", nopts.cachedir,
       ]
-
+  echo "After reading the CMakeLists.txt"
+  echo "Writing now to a new file"
+  
   writeFile("CMakeLists.txt", cmake_template % tmplt_args)
 
   tmplt_args.insert(["NIMBLE_NIMCACHE", nopts.cachedir.relativePath(nopts.projsrc) ], 0)
