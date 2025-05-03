@@ -88,7 +88,7 @@ proc parseNimbleArgs(): NimbleArgs =
     flags = idf_args.filterIt(it.contains(":")).mapIt(it.split(":")).mapIt( (it[0], it[1])).toTable()
     esp32_template  = flags.getOrDefault("--esp32-template", "networking")
     app_template  = flags.getOrDefault("--app-template", "http_server")
-    esp_idf_ver  = flags.getOrDefault("--esp-idf-version", "V4.0").toUpper().strip(chars={'V'})
+    esp_idf_ver  = flags.getOrDefault("--esp-idf-version", "V5.4").toUpper().strip(chars={'V'})
 
   # echo "APP_TEMPLATE ANY: ", idf_args.any(x => x.startsWith("--app-template"))
   # echo "APP_IDF_ARGS: ", idf_args, " ", "--dist-clean" in idf_args
