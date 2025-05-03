@@ -8,7 +8,7 @@ srcDir        = "src"
 
 
 # Dependencies
-requires "nim >= 1.4.0"
+requires "nim >= 2.2.2"
 requires "msgpack4nim >= 0.3.1"
 requires "stew >= 0.1.0"
 requires "bytesequtils"
@@ -17,7 +17,7 @@ requires "bytesequtils"
 import os, strutils
 
 const NFLAGS="--verbosity:0 -d:ESP_IDF_VERSION=" &
-              getEnv("ESP_IDF_VERSION", "4.4") &
+              getEnv("ESP_IDF_VERSION", "5.4") &
               " --cincludes:" & (getCurrentDir() / "tests" / "c_headers" / "mock")
 
 proc header(msg: string) =
