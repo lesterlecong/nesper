@@ -8,7 +8,7 @@ srcDir        = "src"
 
 
 # Dependencies
-requires "nim >= 2.2.2"
+requires "nim >= 1.6.14"
 requires "msgpack4nim >= 0.3.1"
 requires "stew >= 0.1.0"
 requires "bytesequtils"
